@@ -3,10 +3,10 @@ import Card from "../components/Card/Card";
 import InputGroup from "../components/Filter/category/InputGroup";
 
 const Episodes = () => {
-  let [results, setResults] = React.useState([]);
-  let [info, setInfo] = useState([]);
-  let { air_date, episode, name } = info;
-  let [id, setID] = useState(1);
+  const [results, setResults] = React.useState([]);
+  const [info, setInfo] = useState([]);
+  const { air_date, episode, name } = info;
+  const [id, setID] = useState(1);
 
   let api = `https://rickandmortyapi.com/api/episode/${id}`;
 
@@ -28,7 +28,7 @@ const Episodes = () => {
     <div className="container">
       <div className="row mb-3">
         <h1 className="text-center mb-3">
-          Episode name :{" "}
+          {episode} :{" "}
           <span className="text-primary">{name === "" ? "Unknown" : name}</span>
         </h1>
         <h5 className="text-center">
@@ -41,7 +41,8 @@ const Episodes = () => {
           <InputGroup name="Episode" changeID={setID} total={51} />
         </div>
         <div className="col-lg-8 col-12">
-          <div className="row">
+          <div className="row ">
+
             <Card page="/episodes/" results={results} />
           </div>
         </div>

@@ -1,20 +1,44 @@
 $radius: 10px;
 
-.card {
-  border: 2px solid #0b5ed7;
-  border-radius: $radius;
-}
+// .card {
+//   // border: 2px solid #0b5ed7;
+//   border-radius: $radius;
+// }
 
-.content {
-  padding: 10px;
-}
+// .content {
+//   padding: 10px;
+// }
 
 .img {
   border-radius: 50%;
 }
-
+.img:hover {
+  border-radius: 0%;
+  scale: 1.05;
+}
 .badge {
   top: 10px;
   right: 20px;
   font-size: 17px;
+}
+.badgeDetails {
+  top: 450px;
+  right: 925px;
+  font-size: 17px;
+}
+.gender {
+  top: 5px;
+  right: 10px;
+}
+
+.genderStyle {
+  top: 420px;
+  right: 1050px;
+}
+.imgDetails{
+  border-radius: 50%;
+
+}
+.imgDetails:hover{
+  scale: 1.10;
 }

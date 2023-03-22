@@ -34,13 +34,13 @@ function App() {
 }
 
 const Home = () => {
-  let [pageNumber, updatePageNumber] = useState(1);
-  let [status, updateStatus] = useState("");
-  let [gender, updateGender] = useState("");
-  let [species, updateSpecies] = useState("");
-  let [fetchedData, updateFetchedData] = useState([]);
-  let [search, setSearch] = useState("");
-  let { info, results } = fetchedData;
+  const [pageNumber, updatePageNumber] = useState(1);
+  const [status, updateStatus] = useState("");
+  const [gender, updateGender] = useState("");
+  const [species, updateSpecies] = useState("");
+  const [fetchedData, updateFetchedData] = useState([]);
+  const [search, setSearch] = useState("");
+  const { info, results } = fetchedData;
 
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
@@ -50,9 +50,10 @@ const Home = () => {
       updateFetchedData(data);
     })();
   }, [api]);
+
+
   return (
     <div className="App">
-      <h1 className="text-center mb-3">Characters</h1>
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="row">
@@ -64,7 +65,8 @@ const Home = () => {
             updateSpecies={updateSpecies}
             updatePageNumber={updatePageNumber}
           />
-          <div className="col-lg-8 col-12">
+          <div className="col-lg-8 col-12">      {//por aqui se cambia la posicion de las cosas un poco// }
+}
             <div className="row">
               <Card page="/" results={results} />
             </div>

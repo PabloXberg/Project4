@@ -3,10 +3,10 @@ import Card from "../components/Card/Card";
 import InputGroup from "../components/Filter/category/InputGroup";
 
 const Location = () => {
-  let [results, setResults] = React.useState([]);
-  let [info, setInfo] = useState([]);
-  let { dimension, type, name } = info;
-  let [number, setNumber] = useState(1);
+  const [results, setResults] = React.useState([]);
+  const [info, setInfo] = useState([]);
+  const { dimension, type, name } = info;
+  const [number, setNumber] = useState(1);
 
   let api = `https://rickandmortyapi.com/api/location/${number}`;
 
